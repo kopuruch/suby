@@ -1,0 +1,17 @@
+.button-text {
+  @include Bold(18, 1.2);
+  letter-spacing: .08em;
+}
+
+.label-text {
+  @include Font(14, 1.2);
+}
+
+.label-text-small {
+  @include Bold(12, 1.2);
+  letter-spacing: 0.08em;
+}
+
+.description-text {
+  @include Font(13, calc(16 / 13));
+}

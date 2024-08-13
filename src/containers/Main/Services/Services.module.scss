@@ -1,0 +1,103 @@
+@import '@Styles/mixins';
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  color: $l-green;
+  border-color: $l-green-10;
+}
+
+.title {
+  margin-bottom: 26px;
+  text-align: center;
+
+  @include bp-min(lg) {
+    margin-bottom: 32px;
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 24px;
+  width: 100%;
+  margin-bottom: 30px;
+
+  @include bp-min(lg) {
+    margin-bottom: 40px;
+  }
+
+  @include bp-max(lg) {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+  }
+}
+
+.item {
+  text-align: center;
+  background: $bg-light-violet;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @extend %borderRadiusBlock;
+
+  @include bp-min(lg) {
+    padding: 32px 24px;
+  }
+
+  @include bp-min(xl) {
+    padding: 32px;
+  }
+}
+
+.itemImg {
+  width: 115px;
+  height: 95px;
+  background: url('/images/services/blot.svg')no-repeat center center / contain;
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+
+  @include bp-min(lg) {
+    margin-bottom: 32px;
+  }
+}
+
+.itemTitleWrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+
+  @include bp-min(lg) {
+    margin-bottom: 24px;
+  }
+}
+
+.itemTitle {
+
+}
+
+.itemTitleLabel {
+  margin-left: 8px;
+  background: $c-gray-100;
+  border-radius: 30px;
+  color: $c-gray-0;
+  padding: 6px 12px;
+}
+
+.itemDescription {
+  max-width: $inner-block;
+}

@@ -1,0 +1,69 @@
+@import '@Styles/mixins';
+
+
+.label {
+  color: $l-orange;
+  border-color: $l-orange-10;
+}
+
+.title {
+  margin-bottom: 24px;
+
+  @include bp-min(lg) {
+    margin-bottom: 32px;
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 24px;
+
+  @include bp-max(lg) {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+  }
+}
+
+.item {
+  background: $c-gray-100;
+  @extend %borderRadiusBlock;
+  padding: 24px;
+  color: $c-gray-0;
+
+  @include bp-min(lg) {
+    padding: 32px;
+  }
+}
+
+.itemInner {
+  max-width: $inner-block;
+  margin: 0 auto;
+}
+
+.itemLabel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  color: $p-default;
+
+  @include bp-min(lg) {
+    margin-bottom: 16px;
+  }
+}
+
+.itemIcon {
+  margin-right: 10px;
+}
+
+.itemTitle {
+  margin-bottom: 16px;
+
+  @include bp-min(lg) {
+    margin-bottom: 24px;
+  }
+}
+
+.itemDescription {
+
+}

@@ -1,0 +1,154 @@
+@import './vars.scss';
+
+
+@mixin showVisible {
+  opacity: 1;
+  visibility: visible;
+}
+
+@mixin hideVisible {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+@mixin bp-max($point) {
+  @if $point ==sm {
+    @media (max-width: calc($sm - .02px)) {
+      @content;
+    }
+  } @else if $point ==md {
+    @media (max-width: calc($md - .02px)) {
+      @content;
+    }
+  } @else if $point ==lg {
+    @media (max-width: calc($lg - .02px)) {
+      @content;
+    }
+  } @else if $point ==xl {
+    @media (max-width: calc($xl - .02px)) {
+      @content;
+    }
+  } @else if $point ==xxl {
+    @media (max-width: calc($xxl - .02px)) {
+      @content;
+    }
+  } @else if $point {
+
+    // allows custom breakpoints
+    @media (max-width: calc($point - .02px)) {
+      @content;
+    }
+  }
+}
+
+
+@mixin bp-min($point) {
+  @if $point ==sm {
+    @media (min-width: $sm) {
+      @content;
+    }
+  } @else if $point ==md {
+    @media (min-width: $md) {
+      @content;
+    }
+  } @else if $point ==lg {
+    @media (min-width: $lg) {
+      @content;
+    }
+  } @else if $point ==xl {
+    @media (min-width: $xl) {
+      @content;
+    }
+  } @else if $point ==xxl {
+    @media (min-width: $xxl) {
+      @content;
+    }
+  } @else if $point {
+    @media (min-width: $point) {
+      @content;
+    }
+  }
+}
+
+@mixin Font($size, $lineHeight: false, $weight: false, $important: false) { //TODO: lg using in relative percent to fontsize like 1.2, 1.47 ets
+  font-size: #{$size}px #{if($important, unquote(' !important'), '')};
+
+  @if $weight !=false {
+    font-weight: $weight #{if($important, unquote(' !important'), '')};
+  }
+
+  @if $lineHeight !=false {
+    line-height: $lineHeight #{if($important, unquote(' !important'), '')};
+  }
+}
+
+@mixin Regular($size: $defaultFontSize, $lineHeight: false, $important: false) {
+  @include Font($size, $lineHeight, 400, $important);
+}
+
+@mixin Medium($size: $defaultFontSize, $lineHeight: false, $important: false) {
+  @include Font($size, $lineHeight, 500, $important);
+}
+
+@mixin Semibold($size: $defaultFontSize, $lineHeight: false, $important: false) {
+  @include Font($size, $lineHeight, 600, $important);
+}
+
+@mixin Bold($size: $defaultFontSize, $lineHeight: false, $important: false) {
+  @include Font($size, $lineHeight, 700, $important);
+}
+
+@mixin Black($size: $defaultFontSize, $lineHeight: false, $important: false) {
+  @include Font($size, $lineHeight, 800, $important);
+}
+
+@mixin Scroll() {
+  scrollbar-color: $p-default $c-gray-100;
+  scrollbar-width: thin;
+
+  ::-webkit-scrollbar,
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-thumb {
+    background: $c-gray-0;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-track,
+  &::-webkit-scrollbar-track {
+    background: $c-gray-100;
+  }
+}
+
+%abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%abs-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%borderRadiusBlock {
+  border-radius: 30px;
+
+  @include bp-min(xl) {
+    border-radius: 40px;
+  }
+}

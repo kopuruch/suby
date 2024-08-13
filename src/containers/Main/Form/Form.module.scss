@@ -1,0 +1,47 @@
+@import '@Styles/mixins';
+
+.section {
+  margin-bottom: -1px;
+  padding: 60px 0 50px;
+  color: $c-gray-0;
+  background: url('/images/form/mobile-background.png')no-repeat center top / cover, $c-gray-0;
+
+  @include bp-min(lg) {
+    padding: 110px 0 80px;
+    background: url('/images/form/background.png')no-repeat center top / cover, $c-gray-0;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.description {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.inputs {
+  margin-bottom: 40px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 16px;
+}
+
+.btn {
+  max-width: 365px;
+}
+
+.sentText {
+  text-align: center;
+}

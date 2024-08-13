@@ -1,0 +1,48 @@
+.toast {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: red;
+  transform: translateY(100%);
+  will-change: transform;
+  animation: .4s cubic-bezier(.44,-1,.45,1.7) forwards;
+  z-index: 4;
+
+  &--show {
+    animation-name: appear;
+  }
+
+  &--hide {
+    animation-name: disappear;
+  }
+
+  .default {
+    font-size: 14px;
+    @include Bold(14);
+
+    @include bp-max(md) {
+      @include Bold(12);
+    }
+  }
+
+  @keyframes appear {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+
+  @keyframes disappear {
+    from {
+      transform: translateY(0%);
+    }
+    to {
+      transform: translateY(100%);
+    }
+  }
+}

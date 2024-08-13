@@ -1,0 +1,110 @@
+@import './mixins.scss';
+
+html {
+  scroll-behavior: smooth;
+}
+
+*, html, body {
+  touch-action: pan-y pan-x;
+}
+
+html,
+body {
+  font-family: var(--fixel-display-font);
+  padding: 0;
+  margin: 0;
+  @include Font(14, calc(24/14));
+
+  @include bp-min(lg) {
+    @include Font(16, calc(28/16));
+  }
+
+  @include Scroll;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  @include Scroll();
+  background: $c-gray-100;
+
+  &.overflow--hidden {
+    overflow: hidden;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.section {
+  padding: 25px 0;
+
+  @include bp-min(md) {
+    padding: 40px 0;
+  }
+
+  @include bp-min(lg) {
+    padding: 60px 0;
+  }
+
+  &--light {
+    color: $c-gray-100;
+    background: $c-gray-0;
+  }
+
+  &--dark {
+    color: $c-gray-0;
+    background: $c-gray-100;
+  }
+}
+
+.hero-first-block {
+  padding-top: 115px;
+
+  @include bp-min(md) {
+    padding-top: 130px;
+  }
+
+  @include bp-min(lg) {
+    padding-top: 150px;
+  }
+
+  @include bp-min(xl) {
+    padding-top: 180px;
+  }
+
+  @include bp-min(xxl) {
+    padding-top: 210px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 12px;
+  max-width: $containerWidth;
+
+  @include bp-min(md) {
+    padding: 0 20px;
+  }
+
+  @include bp-min(lg) {
+    padding: 0 30px;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.noBottomPadding {
+  padding-bottom: 0;
+}
+
+.hidden {
+  display: none !important;
+}

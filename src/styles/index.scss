@@ -1,0 +1,13 @@
+@import './vendors/reset.scss';
+
+@import './vars.scss';
+@import './fonts.scss';
+@import './globals.scss';
+
+@import 'components/title';
+@import 'components/paragraph';
+@import 'components/otherText';
+@import './components/toast.scss';
+@import './components/button.scss';
+@import './components/slider.scss';
+@import './components/input.scss';

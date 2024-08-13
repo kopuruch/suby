@@ -1,0 +1,35 @@
+@import '@Styles/mixins';
+
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  footer {
+    margin-top: auto;
+    z-index: 15;
+  }
+}
+
+.wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  transform: translate3d(0, 0, 0);
+  @include showVisible;
+  transition: .2s ease;
+  transition-property: opacity, visibility;
+
+  &.isOpened {
+    @include hideVisible;
+  }
+}
+
+.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,19 @@
+@import '@Styles/mixins';
+
+
+.error {
+  flex-grow: 1;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @extend %flex-center;
+  position: relative;
+  height: 100vh;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.subtitle {
+  margin: 10px 0 20px;
+}

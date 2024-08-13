@@ -1,0 +1,79 @@
+@import '@Styles/mixins';
+
+
+.section {
+  min-height: 600px;
+  display: flex;
+  background: url('/images/hero/mobile-background.png')no-repeat center bottom / cover, $c-gray-0;
+
+  @include bp-min(lg) {
+    height: 100vh;
+  }
+
+  @include bp-min(lg) {
+    background: url('/images/hero/background.png')no-repeat center bottom / cover, $c-gray-0;
+  }
+}
+
+.wrapper {
+  padding: 90px 0 50px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+
+  @include bp-min(lg) {
+    padding: 100px 0;
+    align-items: flex-start;
+  }
+}
+
+.title {
+  max-width: 695px;
+  margin-bottom: 16px;
+
+  @include bp-max(xl) {
+    max-width: 600px;
+    text-align: center;
+  }
+
+  @include bp-max(lg) {
+    max-width: 400px;
+    margin: 0 auto 16px;
+  }
+}
+
+.description {
+  max-width: 650px;
+  margin-bottom: 30px;
+
+  @include bp-max(xl) {
+    text-align: center;
+  }
+
+  @include bp-max(lg) {
+    max-width: 340px;
+    margin: 0 auto 30px;
+  }
+}
+
+.btn {
+  @include bp-max(lg) {
+    margin: 0 auto 40px;
+  }
+}
+
+.maskot {
+  font-size: 0;
+  width: 205px;
+
+  @include bp-min(lg) {
+    position: absolute;
+    width: 310px;
+    left: calc(50% + 14%);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

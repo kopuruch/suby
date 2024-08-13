@@ -1,0 +1,104 @@
+@import '@Styles/mixins';
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include bp-min(xxl) {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.label {
+  color: $l-crimson;
+  border-color: $l-crimson-10;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 380px;
+  flex-shrink: 0;
+
+  @include bp-max(xxl) {
+    margin-bottom: 24px;
+  }
+}
+
+.title {
+  span {
+    color: $p-default;
+  }
+}
+
+.list {
+  column-gap: 24px;
+  row-gap: 24px;
+  display: grid;
+
+  @include bp-min(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include bp-max(lg) {
+    width: 100%;
+  }
+
+  @include bp-min(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include bp-min(xxl) {
+    padding-left: 5vw;
+  }
+}
+
+.item {
+  @extend %borderRadiusBlock;
+  background: $c-gray-100;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: $c-gray-0;
+
+  @include bp-min(lg) {
+    padding: 24px;
+  }
+}
+
+.itemIcon {
+  border-radius: 50%;
+  background: $c-gray-0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+  margin-bottom: 16px;
+  height: 42px;
+  width: 42px;
+  color: $c-gray-100;
+
+  @include bp-min(lg) {
+    margin-bottom: 24px;
+    width: 56px;
+    height: 56px;
+  }
+}
+
+.itemTitle {
+  margin-bottom: 12px;
+  color: $p-default;
+
+  @include bp-min(lg) {
+    margin-bottom: 16px;
+  }
+}
+
+.itemText {
+
+}

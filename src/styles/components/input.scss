@@ -1,0 +1,85 @@
+@import '@Styles/mixins';
+
+
+.input {
+  $self: &;
+  background: transparent;
+  color: $c-gray-0;
+  width: 100%;
+  height: 56px;
+  border: 1px solid $c-gray-50;
+  border-radius: 40px;
+  caret: $p-default;
+  padding: 0 24px;
+  @include Font(16, 1.6);
+
+  &__block {
+    padding-bottom: 24px;
+    position: relative;
+  }
+
+  &__wrapper {
+    position: relative;
+    border-radius: 40px;
+
+    &--dark {
+      background: $bg-form;
+      color: $c-gray-0;
+
+      #{$self} {
+        &__label {
+          background: $bg-form;
+        }
+      }
+    }
+
+    &--light {
+      background: $c-gray-0;
+      color: $c-gray-100;
+
+      #{$self} {
+        &__label {
+          background: $c-gray-0;
+        }
+      }
+    }
+  }
+
+  &:focus {
+    & + #{$self} {
+      &__label {
+        top: 0;
+      }
+    }
+  }
+
+  &__label {
+    color: $c-gray-60;
+    position: absolute;
+    top: 50%;
+    padding: 0 4px;
+    transform: translateY(-50%);
+    left: 24px;
+    transition: .3s ease;
+    transition-property: left, top;
+    cursor: text;
+
+    &.fill {
+      top: 0;
+    }
+
+    .required-symbol {
+      position: relative;
+      top: -4px;
+      color: $s-error;
+    }
+  }
+
+  &__error {
+    margin-top: 8px;
+    color: $s-error;
+    position: absolute;
+    left: 24px;
+    bottom: 0;
+  }
+}

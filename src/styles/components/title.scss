@@ -1,0 +1,59 @@
+@import '../mixins.scss';
+
+
+.title {
+  font-family: var(--ermilov-font);
+  @include Bold(22, 1.2);
+
+  &--h1 {
+    @include Font(42, 1);
+
+    @include bp-min(lg) {
+      @include Font(50);
+    }
+
+    @include bp-min(xl) {
+      @include Font(58);
+    }
+  }
+
+  &--h2 {
+    @include Font(34);
+
+    @include bp-min(lg) {
+      @include Font(36);
+    }
+
+    @include bp-min(xl) {
+      @include Font(38);
+    }
+  }
+
+  &--h3 {
+    @include Font(26);
+
+    @include bp-min(lg) {
+      @include Font(29);
+    }
+
+    @include bp-min(xl) {
+      @include Font(32);
+    }
+  }
+
+  &--h4 {
+    @include Font(22);
+
+    @include bp-min(xl) {
+      @include Font(24);
+    }
+  }
+
+  &--h5 {
+    @include Semibold(20);
+
+    @include bp-min(xl) {
+      @include Font(22);
+    }
+  }
+}

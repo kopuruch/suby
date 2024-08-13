@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Ermilov';
+  src: url('../fonts/Ermilov-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FixelDisplay';
+  src: url('../fonts/FixelDisplay-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+:root {
+  --ermilov-font: 'Ermilov', sans-serif;
+  --fixel-display-font: 'FixelDisplay', sans-serif;
+}

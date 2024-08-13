@@ -1,0 +1,47 @@
+{
+  "name": "index",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run generateLocaleInterface && env-cmd -f .env.dev next dev",
+    "build:dev": "npm run generateLocaleInterface && node updateVersionScript.js && env-cmd -f .env.dev next build",
+    "build:main": "npm run generateLocaleInterface && node updateVersionScript.js && env-cmd -f .env.prod next build",
+    "start:dev": "env-cmd -f .env.dev next start",
+    "start:main": "env-cmd -f .env.prod next start",
+    "lint": "next lint",
+    "postbuild": "next-sitemap",
+    "generateLocaleInterface": "i18next-resources-for-ts interface -i ./public/locales/en -o ./@types/resources.d.ts"
+  },
+  "dependencies": {
+    "i18next": "^22.4.14",
+    "next": "^13.4.4",
+    "next-i18next": "^13.2.2",
+    "next-sitemap": "^4.2.3",
+    "qs": "^6.11.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-i18next": "^12.2.0",
+    "react-scroll": "^1.9.0",
+    "swiper": "^11.0.6"
+  },
+  "devDependencies": {
+    "@hookform/error-message": "^2.0.1",
+    "@hookform/resolvers": "^3.1.0",
+    "@types/node": "18.15.11",
+    "@types/qs": "^6.9.10",
+    "@types/react": "18.0.37",
+    "@types/react-dom": "18.0.11",
+    "@types/react-scroll": "^1.8.6",
+    "axios": "^1.3.6",
+    "clsx": "^1.2.1",
+    "env-cmd": "^10.1.0",
+    "eslint": "8.38.0",
+    "eslint-config-next": "13.3.0",
+    "i18next-resources-for-ts": "^1.4.0",
+    "moment": "^2.29.4",
+    "sass": "^1.62.0",
+    "sharp": "^0.32.1",
+    "typescript": "5.0.4",
+    "yup": "^1.1.1"
+  }
+}

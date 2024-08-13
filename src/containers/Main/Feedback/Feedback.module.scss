@@ -1,0 +1,94 @@
+@import '@Styles/mixins';
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  color: $l-blue;
+  border-color: $l-blue-10;
+}
+
+.title {
+  margin-bottom: 24px;
+  text-align: center;
+
+  @include bp-min(lg) {
+    margin-bottom: 32px;
+  }
+}
+
+.item {
+  height: auto !important;
+
+  @include bp-min(sm) {
+    padding: 0 100px;
+  }
+
+  @include bp-min(lg) {
+    padding: 0 150px;
+  }
+}
+
+.itemInner {
+  height: 100%;
+  max-width: 820px;
+  background: $bg-light-violet;
+  @extend %borderRadiusBlock;
+  margin: 0 auto;
+  padding: 24px;
+
+  @include bp-min(lg) {
+    padding: 42px;
+  }
+}
+
+.itemTitle,
+.feedback {
+  margin-bottom: 16px;
+
+  @include bp-min(lg) {
+    margin-bottom: 24px;
+  }
+}
+
+.name {
+  margin-bottom: 8px;
+}
+
+.city {
+  color: $c-gray-60;
+}
+
+.slider {
+  width: 100%;
+  position: relative;
+
+  @include bp-max(sm) {
+    padding-bottom: 100px;
+  }
+}
+
+.activeSlide {
+  color: $c-gray-100;
+}
+
+.totalSlides {
+  color: $c-gray-50;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include bp-min(sm) {
+    display: none;
+  }
+}

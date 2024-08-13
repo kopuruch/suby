@@ -1,0 +1,130 @@
+interface Resources {
+  "common": {
+    "nav": {
+      "aboutUs": "About",
+      "services": "Services",
+      "price": "Price",
+      "howItWorks": "How it works?",
+      "feedbacks": "Feedbacks",
+      "advantages": "Advantages",
+      "blog": "Blog",
+      "supportService": "Служба підтримки",
+      "licenseInfo": "Інформація про ліцензію на зображення"
+    },
+    "meta": {
+      "title": "SUBY",
+      "metaTitle": "SUBY Title",
+      "description": "SUBY Description"
+    },
+    "error": {
+      "pageNotFound": "Page not found",
+      "goToMain": "Home page"
+    },
+    "hero": {
+      "title": "english text",
+      "description": "english text"
+    },
+    "about": {
+      "label": "english text",
+      "title": "english text",
+      "description": "english text"
+    },
+    "services": {
+      "label": "Сервіси",
+      "title": "Що входить у підписку?",
+      "list": {
+        "title1": "YouTube Premium",
+        "title2": "YouTube Premium",
+        "title3": "YouTube Premium",
+        "text1": "Підписку на Youtube Premium, дивися мільйони відео без реклами, завантажувати і переглядуй їх офлайн. Також, як бонус, це все можна робити і з музикою",
+        "text2": "Безліч фільмів та серіалів тепер доступні і вам, завдяки Netflix 4k підписці. Відтепер майже усі фільми та серіали в українській озвучці, що робить перегляд приємнішим.",
+        "text3": "Уся музика у вашому телефоні і це завдяки Spotify Premium підписці. З останніми оновленнями стали доступні найпопулярніші світові підкасти."
+      }
+    },
+    "price": {
+      "label": "Прайс",
+      "title": "Ми пропонуємо реальну економію",
+      "tableName": "Порівняльна таблиця",
+      "tableNameInfo": "(1 місяць підписки)",
+      "services1": "YouTube Premium",
+      "services2": "Netflix 4k",
+      "services3": "Spotify Premium",
+      "price": "Ціна",
+      "withSuby": "з Suby",
+      "withoutSuby": "без Suby",
+      "forYear": "(${{price}}/рік)",
+      "forMonth": "${{price}}/<br />місяць"
+    },
+    "howItWorks": {
+      "label": "Як це працює?",
+      "title": "Оформи підписку у кілька кліків",
+      "step": "Крок",
+      "list": {
+        "title1": "Заповни форму і оплати",
+        "title2": "Отримай дані для входу",
+        "title3": "Користуйся!",
+        "text1": "Це займе всього 2 хв. Нам не потрібно більше нічого окрім твого e-mail та імені.",
+        "text2": "Після вдалої оплати ти отримаєш логін та пароль для входу в усі 3 сервіси.",
+        "text3": "Користуйся без обмежень. Так, як би ви це робили оплативши самотужки."
+      }
+    },
+    "feedback": {
+      "label": "Відгуки",
+      "title": "Що клієнти кажуть про нас?"
+    },
+    "advantages": {
+      "label": "Переваги",
+      "title": "Чому <span>Suby</span> — це найкращий вибір?",
+      "list": {
+        "title1": "Низька ціна",
+        "title2": "Підтримка 24/7",
+        "title3": "Зручна оплата",
+        "title4": "Миттєвий доступ",
+        "text1": "Описуємо бенефіт більш детально для юзера.",
+        "text2": "Описуємо бенефіт більш детально для юзера.",
+        "text3": "Описуємо бенефіт більш детально для юзера.",
+        "text4": "Описуємо бенефіт більш детально для юзера."
+      }
+    },
+    "form": {
+      "title": "Розпочни вигідне життя вже зараз",
+      "formInfo": "Заповни форму і користуйся улюбленими сервісами за низькою ціною одразу після здійснення оплати.",
+      "name": "Ім'я",
+      "send": "Надіслати",
+      "submitText": "Дякуємо! Ваша заявка вже в роботі і незабаром ми відправимо вам електронного листа з усіма деталями."
+    },
+    "general": {
+      "subscribe": "Оформити підписку",
+      "order": "Оформити",
+      "top": "Топ"
+    },
+    "links": {
+      "facebook": {
+        "name": "Facebook",
+        "link": ""
+      },
+      "twitter": {
+        "name": "Twitter",
+        "link": ""
+      },
+      "linkedin": {
+        "name": "Linkedin",
+        "link": ""
+      },
+      "terms": {
+        "name": "Terms of Use",
+        "link": ""
+      },
+      "privacy": {
+        "name": "Privacy Policy",
+        "link": ""
+      },
+      "cookie": {
+        "name": "Cookies Policy",
+        "link": ""
+      }
+    }
+  }
+}
+
+export default Resources;

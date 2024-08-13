@@ -1,0 +1,14 @@
+@import 'src/styles/mixins';
+
+
+.pendingLoader {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+
+  svg path,
+  svg rect {
+    fill: yellow;
+  }
+}
